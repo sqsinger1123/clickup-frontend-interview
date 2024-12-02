@@ -2,8 +2,9 @@ import { Children, useState } from 'react';
 
 type Tab = {
     id: number;
-    title: string;
+    title: React.ReactNode;
     content: React.ReactNode;
+    isDisabled?: boolean;
 }
 
 // Like a ul for our tab components.
@@ -12,14 +13,17 @@ function TabList({ tabsData }: { tabsData: Tab[] }) {
 
     return (
         <>
-            <ul className="w-full tab-titles">
+            <ul className="w-full tab-titles flex my-2">
                 {tabsData.map((tab, index) => (
                     <li
                         key={tab.id}
-                        className={`tab-title ${activeTab === index ? 'active italic font-bold' : ''}`}
-                        onClick={() => setActiveTab(index)}
                     >
-                        {tab.title}
+                        <button
+                            onClick={() => setActiveTab(index)}
+                            className={`tab-title flex mx-2 p-2 rounded-md ${activeTab === index ? 'active italic font-bold bg-blue-600 text-white' : ''}`}
+                        >
+                            {tab.title}
+                        </button>
                     </li>
                 ))}
             </ul>
