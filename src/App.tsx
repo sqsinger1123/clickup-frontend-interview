@@ -23,8 +23,9 @@ function App() {
   }
 
   const tabsData = [
-    { id: 1, title: 'Tab 1', content: 'Tab 1 Content' },
+    { id: 1, title: 'Simple', content: 'Raw denim you probably...' },
     { id: 2, title: <FancyTitle />, content: 'Tab 2 Content' },
+    { id: 3, title: 'Disabled', content: 'It is a secret', isDisabled: true },
     { id: 3, title: 'Todo List', content: <TodoListTab /> },
   ];
 
