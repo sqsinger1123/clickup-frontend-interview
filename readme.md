@@ -1,7 +1,14 @@
 # Running the app
 
+You can use either of the following commands to run the app:
 ```
 yarn && yarn start
+```
+
+or
+
+```
+npm start
 ```
 
 In most cases, the app will automatically open up on http://localhost:3000/ . If not, navigate to that URL manually.
