@@ -1,3 +1,13 @@
+# Running the app
+
+```
+yarn && yarn start
+```
+
+In most cases, the app will automatically open up on http://localhost:3000/ . If not, navigate to that URL manually.
+
+It will hot-load any changes. Enjoy!
+
 The prompt:
 > Hello Samuel!
 >
