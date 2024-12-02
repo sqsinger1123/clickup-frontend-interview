@@ -20,8 +20,8 @@ function TabList({ tabsData }: { tabsData: Tab[] }) {
                     >
                         <button
                             onClick={() => setActiveTab(index)}
-                            className={`tab-title flex first:mx-0 mx-2 p-2 rounded-md
-                                ${activeTab === index ? 'active font-bold bg-blue-600 text-white' : 'text-blue-600'}
+                            className={`tab-title flex first:mx-0 mx-2 py-2 px-4 rounded-md
+                                ${activeTab === index ? 'active bg-blue-600 text-white' : 'text-blue-600'}
                                 ${tab.isDisabled ? 'cursor-not-allowed text-gray-500' : 'cursor-pointer'}
                             `}
                             disabled={tab.isDisabled}

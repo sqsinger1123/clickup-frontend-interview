@@ -1,9 +1,7 @@
-import { useState, FormEvent, createContext } from 'react';
+import { createContext } from 'react';
 import './App.css';
 import TodoListTab from './components/TodoListTab';
 import TabList from './components/TabList';
-import TabEntry from './components/TabEntry';
-import { resourceUsage } from 'process';
 
 const ThemeContext = createContext('light');
 
@@ -25,8 +23,8 @@ function App() {
   const tabsData = [
     { id: 1, title: 'Simple', content: 'Raw denim you probably...' },
     { id: 2, title: <FancyTitle />, content: 'Tab 2 Content' },
-    { id: 3, title: 'Disabled', content: 'It is a secret', isDisabled: true },
-    { id: 3, title: 'Todo List', content: <TodoListTab /> },
+    { id: 3, title: 'Disabled', content: 'It is a secret, disabled tab. So you will never see this content!', isDisabled: true },
+    { id: 4, title: 'Todo List', content: <TodoListTab /> },
   ];
 
   return (
